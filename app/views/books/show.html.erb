@@ -1,2 +1,34 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div id="books-show">
+    <h2> Ruby On Rails Power</h2>
+   
+    <div class="books-show-left">
+        <%= image_tag('2.jpg')%>
+    </div>
+    <div class="books-show-right">
+        <h3>Book Info:</h3>
+        <ul>
+            <li><strong>Category: </strong> Ruby On Rails</li>
+            <li><strong>Author: </strong> Aneesha Bakharia</li>
+            <li><strong>Publisher: </strong> Course Technology PTR</li>
+            <li><strong>Year: </strong> 2007</li>
+            <li><strong> ISBN: </strong> 1598632167</li>
+            <li><strong>Format: </strong> Paperback</li>
+            <li><strong>Pages: </strong> 678</li>
+        </ul>
+        <%= link_to "Buy For $4.98", 'https://www.amazon.com/Ruby-Rails-Power-Comprehensive-Guide/dp/1598632167', 
+        class: 'btn btn-success', target: '_blank'%>
+    </div>
+    <div class="clearfix"></div>
+    <h4>Excerpt</h4>
+    <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will 
+    give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, 
+    the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, 
+    because it is pleasure, but because those who do not know how to pursue pleasure rationally 
+    encounter consequences that are extremely painful. Nor again is there anyone who loves or 
+    pursues or desires to obtain pain of itself, because it is pain, but because occasionally 
+    circumstances occur in which toil and pain can procure him some great pleasure. To take a 
+    trivial example, which of us ever undertakes laborious physical exercise, except to obtain some 
+    advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure 
+    that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
+
+</div>

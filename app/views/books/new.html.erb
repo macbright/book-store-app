@@ -1,2 +1,52 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h2> Add New Book </h2>
+
+<%= form_for @book do |x| %>
+    <div class="form-group">
+        <%= x.label :title%> <br/>
+        <%= x.text_field :title, class: 'form-control'%><br />
+    </div>
+
+    <div class="form-group">
+        <%= x.label :isbn%> <br/>
+        <%= x.text_field :isbn, class: 'form-control'%><br />
+    </div>
+
+    <div class="form-group">
+        <%= x.label :category %> <br/>
+        <%= x.select :category_id, category.all.collect { |y| [y.name, x.id]},
+        {:include_blank => 'select one'}, class: 'form-control'%><br /><br />
+    </div>
+
+     <div class="form-group">
+        <%= x.label :author %> <br/>
+        <%= x.select :author_id, category.all.collect { |y| [y.name, x.id]},
+        {:include_blank => 'select one'}, class: 'form-control'%><br /><br />
+    </div>
+
+     <div class="form-group">
+        <%= x.label :publisher %> <br/>
+        <%= x.select :publisher_id, category.all.collect { |y| [y.name, x.id]},
+        {:include_blank => 'select one'}, class: 'form-control'%><br /><br />
+    </div>
+
+    <div class="form-group">
+        <%= x.label :excerpt%> <br/>
+        <%= x.text_area :excerpt, class: 'form-control'%><br />
+    </div>
+
+    <div class="form-group">
+        <%= x.label :pages%> <br/>
+        <%= x.number_field :pages, class: 'form-control'%><br />
+    </div>
+    <div class="form-group">
+        <%= x.label :price%> <br/>
+        <%= x.text_field :price, class: 'form-control'%><br />
+    </div>
+    <div class="form-group">
+        <%= x.label :buy%> <br/>
+        <%= x.text_field :buy, class: 'form-control'%><br />
+    </div>
+
+    <%= x.submit "submit", class:'btn btn-primary' %>
+    <%= link_to "cancel", books_path, class:'btn btn-default'%>
+<% end %>
