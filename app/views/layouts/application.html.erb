@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bookstore</title>
+    <title> <%= @page_title ? @page_title : 'Welcome'%> | The Bookstore</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <nav class="navbar navbar-expand-md navbar-default bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-default bg-light fixed-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       </button>
-      <div class="collapse navbar-collapse" >
+      <div class="collapse navbar-collapse container" >
         <ul class="nav navbar-nav mr-auto">
-          <li class="active"><%= link_to 'Home', root_path%></li>
-          <li><%= link_to 'About', about_path%></li>
+          <li class="<%= params[:controller] == 'books' ? 'active' : '' %>"><%= link_to 'Home', root_path%></li>
+          <li class="<%= params[:controller] == 'about' ? 'active' : '' %>"><%= link_to 'About', about_path%></li>
         </ul> 
         <div class="show dropdown">
-          <a class="dropdown-toggle mr-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Add New
           </a>
           <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuLink">
@@ -33,11 +33,28 @@
     </nav>
     <header>
       <div class="container">
-        <h1> The BookStore <small> <%= @page_title %></small></h1>
+        <h1> The BookStore <small> <%= @page_title ? @page_title : 'Welcome'%></small></h1>
       </div>
     </header>
 
-    
-    <%= yield %>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+             <%= yield %>
+          </div>
+          <div class="col-md-4">
+            <%= render 'partials/sidebar'%>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p> Copyright &copy; 2019, All Right Reserved. </p>
+      </div>
+    </footer>
+   
   </body>
 </html>

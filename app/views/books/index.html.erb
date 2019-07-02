@@ -1,2 +1,46 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<div id="books-index">
+    <div class="row">
+        <div class="col-md-3 col-sm-3">
+            <h5> Ruby On Rails Power</h5>
+            <%= image_tag('2.jpg')%>
+            <%= link_to 'Read More', book_path(1), class:'btn btn-primary'%>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <h5> Ruby On Rails Tutorials</h5>
+            <%= image_tag('3.png')%>
+            <%= link_to 'Read More', book_path(1), class:'btn btn-primary'%>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <h5> Ruby On Rails Explained for Frond End</h5>
+            <%= image_tag('4.jpg')%>
+            <%= link_to 'Read More', book_path(1), class:'btn btn-primary'%>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <h5> A comparism of Ruby On Rails Web Server</h5>
+            <%= image_tag('5.jpg')%>
+            <%= link_to 'Read More', book_path(1), class:'btn btn-primary'%>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-3">
+            <h5> Practical Ruby On Rails Web 2.0 Project</h5>
+            <%= image_tag('6.jpeg')%>
+            <%= link_to 'Read More', book_path(1), class:'btn btn-primary'%>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <h5> Ruby for Rails </h5>
+            <%= image_tag('7.png')%>
+            <%= link_to 'Read More', book_path(1), class:'btn btn-primary'%>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <h5> Pro Active Record </h5>
+            <%= image_tag('8.jpg')%>
+            <%= link_to 'Read More', book_path(1), class:'btn btn-primary'%>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <h5> Ruby On Rails Tutorials 2nd Edition</h5>
+            <%= image_tag('1.jpg')%>
+            <%= link_to 'Read More', book_path(1), class:'btn btn-primary'%>
+        </div>
+    </div>
+</div>
