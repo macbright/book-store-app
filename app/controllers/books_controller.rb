@@ -36,7 +36,6 @@ class BooksController < ApplicationController
     @book.destroy
 
     flash[:notice] = 'Book Removed'
-
     redirect_to books_path
   end
 

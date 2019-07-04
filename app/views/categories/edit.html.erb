@@ -1,2 +1,19 @@
-<h1>Categories#edit</h1>
-<p>Find me in app/views/categories/edit.html.erb</p>
+<h2> Edit Category</h2>
+<%= form_for @category do |x| %>
+
+    <%# Check for errors %>
+    <% if @category.errors.any? %>
+        <%  @category.errors.full_messages.each do |msg| %>
+
+            <%# display error messages %>
+            <div class="alert alert-danger"><%= msg%></div>
+        <% end %>
+    <% end %>
+    <div class="form-group">
+        <%= x.label :name%> <br/>
+        <%= x.text_field :name, class: 'form-control'%><br />
+    </div>
+
+    <%= x.submit "submit", class:'btn btn-primary' %>
+    <%= link_to "cancel", categories_path, class:'btn btn-default'%>
+<% end %>

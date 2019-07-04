@@ -1,2 +1,17 @@
-<h1>Publishers#edit</h1>
-<p>Find me in app/views/publishers/edit.html.erb</p>
+<h2> Edit Publisher</h2>
+<%= form_for @publisher do |x| %>
+
+    <% if @publisher.errors.any? %>
+        <%# Check for errors %>
+        <%  @publisher.errors.full_messages.each do |msg| %>
+            <%# Display error messages %>
+            <div class="alert alert-danger"><%= msg%></div>
+        <% end %>
+    <% end %>
+    <div class="form-group">
+        <%= x.label :name%> <br/>
+        <%= x.text_field :name, class: 'form-control'%><br />
+    </div>
+    <%= x.submit "submit", class:'btn btn-primary' %>
+    <%= link_to "cancel", publishers_path, class:'btn btn-default'%>
+<% end %>
