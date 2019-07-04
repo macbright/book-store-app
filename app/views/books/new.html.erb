@@ -19,7 +19,7 @@
 
      <div class="form-group">
         <%= x.label :author %> <br/>
-        <%= x.select :author_id, Author.all.collect { |y| [y.name, y.id]},
+        <%= x.select :author_id, Author.all.collect { |y| [y.first_name + ' ' + y.last_name, y.id]},
         {:include_blank => 'select one'}, class: 'form-control'%><br /><br />
     </div>
 
@@ -33,7 +33,7 @@
         <%= x.label :excerpt%> <br/>
         <%= x.text_area :excerpt, class: 'form-control'%><br />
     </div>
-
+  
     <div class="form-group">
         <%= x.label :pages%> <br/>
         <%= x.number_field :pages, class: 'form-control'%><br />
@@ -42,9 +42,24 @@
         <%= x.label :price%> <br/>
         <%= x.text_field :price, class: 'form-control'%><br />
     </div>
+
     <div class="form-group">
         <%= x.label :buy%> <br/>
         <%= x.text_field :buy, class: 'form-control'%><br />
+    </div>
+    <div class="form-group">
+        <%= x.label :format%> <br/>
+        <%= x.text_field :format, class: 'form-control'%><br />
+    </div>
+
+     <div class="form-group">
+        <%= x.label :year%> <br/>
+        <%= x.text_field :year, class: 'form-control'%><br />
+    </div>
+
+     <div class="form-group">
+        <%= x.label :coverpath%> <br/>
+        <%= x.text_field :coverpath, class: 'form-control'%><br />
     </div>
 
     <%= x.submit "submit", class:'btn btn-primary' %>

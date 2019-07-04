@@ -1,5 +1,14 @@
 <h2> Add New Category</h2>
 <%= form_for @category do |x| %>
+
+    <%# Check for errors %>
+    <% if @category.errors.any? %>
+        <%  @category.errors.full_messages.each do |msg| %>
+
+            <%# display error messages %>
+            <div class="alert alert-danger"><%= msg%></div>
+        <% end %>
+    <% end %>
     <div class="form-group">
         <%= x.label :name%> <br/>
         <%= x.text_field :name, class: 'form-control'%><br />
