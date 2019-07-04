@@ -21,4 +21,8 @@ class CategoriesController < ApplicationController
 
   def show
   end
+  private 
+    def  catergoy_params
+      params.require(:category).permit(:name)
+    end
 end
