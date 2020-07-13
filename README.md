@@ -74,6 +74,10 @@ Okike Bright – [@b_okike](https://twitter.com/b_okike) – brightokike@gmail.c
 [https://github.com/macbright/github-link](https://github.com/macbright)
 
 
+## Future Features
+1. convert the app into a single page app using rails API at the backend and React & Redux at the frontend
+
+2. add a user session to the app so that only registered users can add book to the store
 
 
 ## Contributing
