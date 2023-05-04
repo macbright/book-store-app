@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # gem 'jquery-rails'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'jquery-rails', '~> 4.4'
 gem 'rails-ujs', '~> 0.1.0'
 # gem 'mysql2'
 # Use Puma as the app server
